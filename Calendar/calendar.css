@@ -30,7 +30,8 @@ body{
 	padding:5px;
 }
 #calendar li.current{
-	color:#F69;background:#fff;
+	color:#F69;
+	background:#fff;
 }
 #calendar li strong{
 	display:block;
