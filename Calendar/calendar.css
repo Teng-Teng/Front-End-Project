@@ -4,6 +4,10 @@ body,ul,li,h2,p{
 body{
 	font:12px/1.5 Tahoma;
 }
+h3 {
+	text-align: center;
+	font-size: 1rem;
+}
 #calendar{
 	width:248px;
 	overflow:hidden;
