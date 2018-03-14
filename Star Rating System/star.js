@@ -17,27 +17,27 @@ window.onload = function ()
 	for (i = 1; i <= aLi.length; i++)
 	{
 		aLi[i - 1].index = i;
-		//鼠标移过显示分数
+		//Mouseover display the score
 		aLi[i - 1].onmouseover = function ()
 		{
 			fnPoint(this.index);
-			//浮动层显示
+			//Floating layer display
 			oP.style.display = "block";
-			//计算浮动层位置
+			//Calculate floating layer position
 			oP.style.left = oUl.offsetLeft + this.index * this.offsetWidth - 104 + "px";
-			//匹配浮动层文字内容
+			//Match floating layer text content
 			oP.innerHTML = "<em><b>" + this.index + "</b> stars " + 
 			aMsg[this.index - 1].match(/(.+)\|/)[1] + "</em>" + 
 			aMsg[this.index - 1].match(/\|(.+)/)[1]
 		};
-		//鼠标离开后恢复上次评分
+		//Restore to last score after mouseleave
 		aLi[i - 1].onmouseout = function ()
 		{
 			fnPoint();
-			//关闭浮动层
+			//Close the floating layer
 			oP.style.display = "none"
 		};
-		//点击后进行评分处理
+		//Click to score
 		aLi[i - 1].onclick = function ()
 		{
 			iStar = this.index;
@@ -46,10 +46,10 @@ window.onload = function ()
 			" stars</strong> (" + aMsg[this.index - 1].match(/\|(.+)/)[1] + ")"
 		}
 	}
-	//评分处理
+	//Rating processing
 	function fnPoint(iArg)
 	{
-		//分数赋值
+		//Assign scores 
 		iScore = iArg || iStar;
 		for (i = 0; i < aLi.length; i++) aLi[i].className = i < iScore ? "on" : "";	
 	}

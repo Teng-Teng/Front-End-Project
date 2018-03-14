@@ -22,7 +22,7 @@ window.onload = function ()
 		{
 			oBox.style.top = oBox.offsetTop + 10 + "px"
 		}
-		//防止溢出
+		//Prevent overflow
 		limit();
 	},30);	
 	
@@ -104,17 +104,17 @@ window.onload = function ()
 		}
 	};
 
-	//防止溢出
+	//Prevent overflow
 	function limit()
 	{
 		var doc = [document.documentElement.clientWidth, document.documentElement.clientHeight]
-		//防止左侧溢出
+		//Prevent left side overflow
 		oBox.offsetLeft <=0 && (oBox.style.left = 0);
-		//防止顶部溢出
+		//Prevent top overflow
 		oBox.offsetTop <=0 && (oBox.style.top = 0);
-		//防止右侧溢出
+		//Prevent right side overflow
 		doc[0] - oBox.offsetLeft - oBox.offsetWidth <= 0 && (oBox.style.left = doc[0] - oBox.offsetWidth + "px");
-		//防止底部溢出
+		//Prevent bottom overflow
 		doc[1] - oBox.offsetTop - oBox.offsetHeight <= 0 && (oBox.style.top = doc[1] - oBox.offsetHeight + "px")
 	}
 };
