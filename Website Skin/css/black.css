@@ -1,6 +1,13 @@
-body{
-	background:#ccc;
+body {
+	background: -webkit-linear-gradient(top,#999,#fff);
 }
-#nav{
-	background:black;
+
+#nav {
+	background: #555;
+}
+
+#skin li.current {
+	border: 5px solid black;
+	padding: 0;
+	background: #fff;
 }

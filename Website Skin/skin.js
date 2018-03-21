@@ -1,13 +1,16 @@
-window.onload = function () {
-	// var oLink = document.getElementsByTagName("link")[0];
-	var oLink = document.getElementById("toggle");
-	var oSkin = document.getElementById("skin").getElementsByTagName("li");
-	for(var i = 0; i< oSkin.length; i++) {		
-		oSkin[i].onclick = function () {
-			for(var p in oSkin) 
-				oSkin[p].className = "";
-			this.className = "current";
-			oLink['href'] = "css/" + this.id + ".css";				
-		}	
-	}
-};
+window.onload = function(){
+	// var link = document.getElementsByTagName("link")[0];
+	var link = document.getElementById("toggle");
+	var skin = document.getElementById("skin").getElementsByTagName("li");
+
+	for( var i =0; i<skin.length; i++ ){
+		skin[i].onclick = function(){
+				for( var a in skin ){
+					skin[a].className = "";
+				}
+				this.className = "current";
+				link['href'] = "./css/"+this.id+".css";
+			}
+		}
+
+}

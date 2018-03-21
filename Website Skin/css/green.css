@@ -1,10 +1,10 @@
-﻿body{
-	background:#A3C5A8;	
+body {
+	background: -webkit-linear-gradient(top,#83bf72,#fff);
 }
-#nav{
-	background:green;
-	border-color:#fff;	
+
+#skin li.current {
+	border: 5px solid green;
+	padding: 0;
+	background: #fff;
 }
-#nav li{
-	border-color:#fff;	
-}
+

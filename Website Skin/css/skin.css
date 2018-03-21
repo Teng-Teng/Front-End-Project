@@ -1,74 +1,64 @@
-body,ul,li{
-	margin:0;padding:0;
+* {
+	margin: 0;
+	padding: 0;
 }
-html,body{
-	height:100%;
+
+li {
+	list-style: none;
+	float: left;
 }
-body{
-	font:12px/1.5 Tahoma;
+
+a {
+	text-decoration: none;
+	color: #333;
 }
-li{
-	list-style-type:none;
+
+body,html {
+	height: 100%;
 }
-a:link,a:visited{
-	text-decoration:none;
+
+#outer {
+	width: 500px;
+	height: 60px;
+	margin: 50px auto;
 }
-a:hover{
-	text-decoration:underline;
+
+#skin li {
+	width: 10px;
+	height: 10px;
+	padding: 5px;
+	margin-right: 10px;
+	cursor: pointer;
 }
-#outer{
-	width:500px;
-	margin:0 auto;
-	overflow:hidden;
-	zoom:1;
+
+#skin li:nth-child(1) {
+	background: red;
 }
-#skin,#nav{
-	overflow:hidden;
-	zoom:1;
+
+#skin li:nth-child(2) {
+	background: green;
 }
-#skin{
-	margin:10px 0;
+
+#skin li:nth-child(3) {
+	background: black;
 }
-#skin li{
-	float:left;
-	width:6px;
-	height:6px;
-	cursor:pointer;
-	overflow:hidden;
-	margin-right:10px;
-	text-indent:-9999px;
-	border-width:4px;
-	border-style:solid;
+
+#nav {
+	border: 1px solid #fff;
+	margin-top: 10px;
+	overflow: hidden;
+	height: 30px;
+	width: 537px;
+	background: green;
 }
-#skin li.current{
-	background:#fff!important;
+
+#nav li a {
+	padding: 0px 25px;
+	line-height: 30px;
+	color: #fff;
+	border-right: 1px solid #fff;
 }
-#red{
-	border-color:red;
-	background:red;
-}
-#green{
-	border-color:green;
-	background:green;
-}
-#black{
-	border-color:black;
-	background:black;
-}
-#nav{
-	border:1px solid #fff;
-}
-#nav li{
-	float:left;
-	width:82px;
-	line-height:25px;
-	text-align:center;
-	border-right:1px solid #fff;
-}
-#nav li.last{
-	width:83px;
-	border-right-width:0;
-}
-#nav li a{
-	color:#fff;
+
+#nav li:last-child a {
+	border-right: 0;
 }
